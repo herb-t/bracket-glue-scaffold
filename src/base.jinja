@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html{% if g.l10n and g.l10n.lang_is_rtl %} dir="rtl"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <title>Brackets + Kintaro + Glue Yo</title>
+    <meta name="referrer" content="no-referrer" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet"> -->
+
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;lang=en" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Product+Sans:400&amp;lang=en" rel="stylesheet">
+
+    <link rel="icon" href="/_bracket/static/bracket-logo.png?v1" type="image/x-icon" />
+    {% block css %}
+      <link rel="stylesheet" href="{{'css/index.min.css'|static}}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {% endblock %}
+    {% block headjs %}
+      <script src="{{'js/detect.min.js'|static}}"></script>
+    {% endblock %}
+  </head>
+
+  <body class="{% block body_class %}main{% endblock %}">
+    {% block body %}
+
+      {% block header %}
+        {% include 'partials/header.jinja' %}
+      {% endblock header %}
+
+      <div class="{% block content_class %}{% endblock %}">
+        {% block content %}{% endblock %}
+      </div>
+
+      {% block footer %}
+        {% include 'partials/footer.jinja' %}
+      {% endblock footer %}
+
+    {% endblock body %}
+
+    {% block end_body %}
+      <script src="//www.gstatic.com/external_hosted/gsap/v1_16_1/TweenLite.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-touch.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-animate.min.js"></script>
+      <script src="https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js"></script>
+
+      <script src="{{'js/index.min.js'|static}}"></script>
+      {% include "static/herc-assets/icons/svgs.inc.html" %}
+      {#
+        This template renders bracket environment info when a ?props url parameter
+        is included in a request, otherwise, is noop.
+      #}
+      {% include 'b/utils.jinja' %}
+    {% endblock %}
+  </body>
+</html>

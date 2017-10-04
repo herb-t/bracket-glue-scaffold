@@ -1,26 +1,313 @@
 {# Replace this line with a reference to your own base template. #}
-{% extends 'b/layouts/base.jinja' %}
+{% extends 'base.jinja' %}
 
 {% block content %}
-  <style media="screen">
-    .my-really-cool-greeting-module {
-      text-align: center;
-      margin-top: 60px;
-    }
-  </style>
-  <h1 class="my-really-cool-greeting-module">{{ greeting }}</h1>
+<div class="glue-zippy-set h-c-accordion">
+  <span class="h-c-eyebrow h-c-accordion__eyebrow">General</span>
 
-  {% include 'emoji-component/emoji-component.jinja' %}
-  <h1>YOu lying to me</h1>
+  <a class="demo__link" href="/demo" target="_blank">KCS Demo</a>
+  <a class="demo__link" href="/b" target="_blank">Bracket Docs</a>
+
+  {# glue yt video #}
+  <div class="demo__video">
+    <a class="glue-yt-video"
+      data-glue-yt-video-vid="a1Y73sPHKxw"
+      data-glue-yt-video-height="390"
+      data-glue-yt-video-width="640"
+      glue-yt-video-listeners="ytVideoDemoCtrl.HeroOnReady"
+      href="https://youtube.com/watch?v=a1Y73sPHKxw"
+      ng-cloak>
+    </a>
+  </div>
+
+  {# glue/herc accordian #}
+  <div class="glue-zippy-toggle-all h-c-accordion__toggle">
+    <span class="h-c-accordion__toggle-text h-c-accordion__toggle-text--expanded">Expand
+    all</span> <span class="h-c-accordion__toggle-text h-c-accordion__toggle-text--collapsed">Collapse
+    all</span> <svg class="h-c-icon h-c-icon--18px h-c-accordion__toggle-circle">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mi-arrow-circle"></use></svg>
+  </div>
+  <ul class="h-c-accordion__list">
+    <li class="glue-zippy glue-a-zippy--v-smooth-expand h-c-accordion__separator" id="zippy-1">
+      <div class="glue-zippy-btn h-c-accordion__button">
+        <h4 class="h-c-accordion__button-header">
+          Heading 1
+        </h4><svg class="h-c-icon--18px h-c-accordion__button-arrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mi-arrow-item"></use></svg>
+      </div>
+      <div class="glue-zippy-content h-c-accordion__content" data-glue-zippy-content-set-aria-hidden="true">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin nisl ac
+        risus rutrum, non convallis arcu semper. Aenean tincidunt nisl quis blandit
+        facilisis. Pellentesque ullamcorper ultrices semper. Nullam tempus mattis lacus,
+        sed vestibulum lorem commodo ac. Duis elit dolor, pulvinar quis velit in,
+        placerat egestas urna. Integer tellus sem, imperdiet nec magna vel, facilisis
+        rhoncus ex. Ut ullamcorper, nisi et vehicula laoreet, augue sem aliquet massa, ac
+        ullamcorper diam sem ac metus. Aliquam eget ligula pretium, tincidunt urna
+        malesuada, pretium ligula. Vivamus in tellus rutrum, viverra dui id, tincidunt
+        diam. Donec in ex at mi consequat blandit ac maximus metus. Morbi vel placerat
+        nibh. Aenean aliquam nec mi id semper.
+      </div>
+    </li>
+    <li class="glue-zippy glue-a-zippy--v-smooth-expand h-c-accordion__separator" id="zippy-2">
+      <div class="glue-zippy-btn h-c-accordion__button">
+        <h4 class="h-c-accordion__button-header">
+          Heading 2
+        </h4><svg class="h-c-icon--18px h-c-accordion__button-arrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mi-arrow-item"></use></svg>
+      </div>
+      <div class="glue-zippy-content h-c-accordion__content" data-glue-zippy-content-set-aria-hidden="true">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin nisl ac
+        risus rutrum, non convallis arcu semper. Aenean tincidunt nisl quis blandit
+        facilisis. Pellentesque ullamcorper ultrices semper. Nullam tempus mattis lacus,
+        sed vestibulum lorem commodo ac. Duis elit dolor, pulvinar quis velit in,
+        placerat egestas urna. Integer tellus sem, imperdiet nec magna vel, facilisis
+        rhoncus ex. Ut ullamcorper, nisi et vehicula laoreet, augue sem aliquet massa, ac
+        ullamcorper diam sem ac metus. Aliquam eget ligula pretium, tincidunt urna
+        malesuada, pretium ligula. Vivamus in tellus rutrum, viverra dui id, tincidunt
+        diam. Donec in ex at mi consequat blandit ac maximus metus. Morbi vel placerat
+        nibh. Aenean aliquam nec mi id semper.
+      </div>
+    </li>
+    <li class="glue-zippy glue-a-zippy--v-smooth-expand h-c-accordion__separator" id="zippy-3">
+      <div class="glue-zippy-btn h-c-accordion__button">
+        <h4 class="h-c-accordion__button-header">
+          Heading 3
+        </h4><svg class="h-c-icon--18px h-c-accordion__button-arrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mi-arrow-item"></use></svg>
+      </div>
+      <div class="glue-zippy-content h-c-accordion__content" data-glue-zippy-content-set-aria-hidden="true">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin nisl ac
+        risus rutrum, non convallis arcu semper. Aenean tincidunt nisl quis blandit
+        facilisis. Pellentesque ullamcorper ultrices semper. Nullam tempus mattis lacus,
+        sed vestibulum lorem commodo ac. Duis elit dolor, pulvinar quis velit in,
+        placerat egestas urna. Integer tellus sem, imperdiet nec magna vel, facilisis
+        rhoncus ex. Ut ullamcorper, nisi et vehicula laoreet, augue sem aliquet massa, ac
+        ullamcorper diam sem ac metus. Aliquam eget ligula pretium, tincidunt urna
+        malesuada, pretium ligula. Vivamus in tellus rutrum, viverra dui id, tincidunt
+        diam. Donec in ex at mi consequat blandit ac maximus metus. Morbi vel placerat
+        nibh. Aenean aliquam nec mi id semper.
+      </div>
+    </li>
+  </ul>
+</div>
+
+{# glue/herc basic carousel #}
+<div class="h-site-width">
+  <div class="h-c-carousel h-c-carousel--hero h-c-carousel--hero-simple glue-pagination"
+      data-glue-pagination-config="{cyclical: true}">
+    <div class="h-c-carousel__wrap">
+      <ul class="glue-carousel"
+          data-glue-carousel-options="{pointerTypes: ['touch', 'mouse'], jump: true}">
+        <li class="h-c-carousel__item">
+          <img class="bracket-demo-image" src="{{ 'kittens.jpg'|static }}" alt="Crazy cats!">
+        </li>
+        <li class="h-c-carousel__item">
+          <img class="bracket-demo-image" src="{{ 'kittens.jpg'|static }}" alt="Crazy cats!">
+        </li>
+        <li class="h-c-carousel__item">
+          <img class="bracket-demo-image" src="{{ 'kittens.jpg'|static }}" alt="Crazy cats!">
+        </li>
+      </ul>
+      <div class="h-c-carousel__paginate-wrap glue-pagination-previous"
+          data-glue-pagination-label="Previous"
+          data-glue-pagination-update-model="false">
+        <div class="h-c-carousel__paginate">
+          <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              class="h-c-icon h-c-icon--keyboard-arrow-left">
+            <use xlink:href="#mi-keyboard-arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="h-c-carousel__paginate-wrap glue-pagination-next"
+          data-glue-pagination-label="Next"
+          data-glue-pagination-update-model="false">
+        <div class="h-c-carousel__paginate">
+          <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              class="h-c-icon h-c-icon--keyboard-arrow-right">
+            <use xlink:href="#mi-keyboard-arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="h-c-carousel__list glue-pagination-page-list"></div>
+  </div>
+</div>
+
+{# herc grid #}
+<div class="h-u-mb-xl">
+  <h2 class="h-c-headline h-c-headline--three h-has-bottom-margin" id="basic">
+    Basic
+  </h2>
+  <p class="h-has-bottom-margin">
+    Add <code>h-c-grid__col--N</code> where N represents how many base columns to span.
+  </p>
+  <div class="h-c-grid demo__grid">
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--3 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--3</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--3 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--3</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--3 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--3</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--3 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--3</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--4 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--4</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--4 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--4</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--4 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--4</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--5 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--5</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--7 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--7</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--6 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--6</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--6 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--6</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--7 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--7</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--5 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--5</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--8 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--8</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--4 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--4</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--9 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--9</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--3 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--3</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--10 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--10</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--2 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--2</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--11 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--11</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--1 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--1</small>
+    </div>
+    <div class=
+    "h-c-grid__col h-c-grid__col--12 herc-docs-c-colored-block herc-docs-c-colored-block--blue">
+    <small>h-c-grid__col--12</small>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block end_body %}
-<link rel="stylesheet" href="{{ 'css/index.min.css'|static }}">
-<script src="{{ 'js/index.min.js'|static }}"></script>
-{#
-  This template renders bracket environment info when a ?props url parameter
-  is included in a request, otherwise, is noop.
-#}
-{% include 'b/utils.jinja' %}
-
+  {{super()}}
 {% endblock %}

@@ -1,0 +1,22 @@
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/global/scss/settings/all';
+
+// If you have custom overrides, include them here and uncomment.
+// @import 'myproject/custom/settings';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/scss/zippy';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/scss/show';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/scss/modal';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/scss/tabby';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/scss/tabset';
+// More Herc stuff
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/global/scss/tools/all';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/global/scss/generic/all';
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/global/scss/elements/all';
+
+// If you'd like to optimize your css size, you can replace
+// 'all' below with the specific components you want, such as
+// buttons, type, icons
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/components/all';
+
+
+
+@import 'node_modules/glue/google3/services/webmaster/goro/templates/glue/releases/latest/hercules/global/scss/trumps/all';
