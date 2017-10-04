@@ -40,8 +40,9 @@ let errors = 0;
  * Prefixer plugin options.
  */
 options.prefixer = {
-  browsers: 'last 3 versions',
-  cascade: false
+  browsers: 'last 6 versions',
+  cascade: false,
+  remove: false
 };
 
 /**
