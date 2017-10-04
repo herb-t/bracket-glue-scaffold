@@ -1,0 +1,50 @@
+# This file configures your App Engine App.
+# See https://goo.gl/fW55As for details.
+
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+# Upgrades instance class size for better CPU/memory in staging.
+instance_class: F4_1G
+
+
+# Handles background tasks like sending analytics to Firebase.
+builtins:
+- deferred: on
+
+
+handlers:
+# Sends all requests to the Bracket app in src.routes and restricts access to
+# App Engine admins.
+- url: .*
+  script: src.routes.bracket.app
+  login: admin
+# Allows running background tasks with the App Engine deferred library.
+- url: /_ah/queue/deferred
+  script: google.appengine.ext.deferred.deferred.application
+  login: admin
+
+
+# Third party libraries that are included in the App Engine SDK must be listed
+# here if you want to use them.
+libraries:
+- name: ssl
+  version: latest
+- name: lxml
+  version: latest
+
+
+skip_files:
+# Tricky regex to exlude all node_modules outside of the @google namespace.
+- .*node_modules\/([^@]|@[^g]|@go[^o]|@goo[^g]|@goog[^l]|@googl[^e]).*
+# Basic regexes to ignore other files we don't want.
+# TODO(nmosher): Use the new watcher ignore flag and convert these to
+# relative path matching regexes when b/34500844 lands.
+- .*\.git
+- .*dist.*
+- .*\.bracket_cache$
+- .*\.pyc$
+- .*\.dist-info.*
+- .*\.tmp/.*

@@ -1,0 +1,26 @@
+{# Replace this line with a reference to your own base template. #}
+{% extends 'b/layouts/base.jinja' %}
+
+{% block content %}
+  <style media="screen">
+    .my-really-cool-greeting-module {
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+  <h1 class="my-really-cool-greeting-module">{{ greeting }}</h1>
+
+  {% include 'emoji-component/emoji-component.jinja' %}
+  <h1>YOu lying to me</h1>
+{% endblock %}
+
+{% block end_body %}
+<link rel="stylesheet" href="{{ 'css/index.min.css'|static }}">
+<script src="{{ 'js/index.min.js'|static }}"></script>
+{#
+  This template renders bracket environment info when a ?props url parameter
+  is included in a request, otherwise, is noop.
+#}
+{% include 'b/utils.jinja' %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "preset": "google",
+  "extract": ["*.tpl", "*.html"],
+  "excludeFiles": ["**/*.min.js", "*.min.js"],
+  "validateIndentation": false,
+  "disallowMultipleLineBreaks": false,
+  "requireCamelCaseOrUpperCaseIdentifiers": false,
+  "jsDoc": {
+    "checkAnnotations": {
+      "preset": "closurecompiler",
+      "extra": {
+        "ngInject": true,
+        "file": true,
+        "overview": true,
+        "fileoverview": true,
+        "private": true
+      }
+    }
+  }
+}

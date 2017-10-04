@@ -1,0 +1,22 @@
+# General files to ignore.
+.DS_Store
+
+# Python files to ignore.
+*.pyc
+
+# Node/npm files to ignore.
+node_modules
+npm-debug.log
+npm-debug.log*
+
+# Scaffold files to ignore.
+/env.development.yaml
+/.bracket_cache
+/dist
+/.tmp
+/zarchive
+
+# Catch all for minified asset file extensions.
+*.min.js
+*.js.map
+*.min.css
